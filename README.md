@@ -8,7 +8,7 @@ site web: http://www.ocenaudio.com.br/
 to manually install dowdload PKGBUILD and:
 
 ```
-makepkg -si
+$ makepkg -si
 ```
 
 in the package directory (with Dolphin and F4):
