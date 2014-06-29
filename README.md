@@ -9,7 +9,6 @@ to manually install dowdload PKGBUILD and:
 
 ```
 makepkg -si
-
 ```
 
 in the package directory (with Dolphin and F4):
@@ -18,5 +17,4 @@ Install with kcp in a terminal:
 
 ```
 $ kcp -i ocenaudio
-
 ```
