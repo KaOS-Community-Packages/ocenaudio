@@ -7,7 +7,7 @@ url="http://www.ocenaudio.com.br/"
 license=('as-is')
 depends=('qt')
 source=("http://www.ocenaudio.com.br/downloads/${pkgname}64.deb")
-md5sums=('d96602752c23afd4f5c59b6b59f4a7fc')
+md5sums=('b612006ca9e20850c893cd99b99f17c1')
  
  
 build() {
