@@ -1,5 +1,5 @@
 pkgname=ocenaudio
-pkgver=2.0.8
+pkgver=2.0.9
 pkgrel=1
 pkgdesc="A cross-platform, easy to use, fast and functional audio editor"
 arch=('x86_64')
