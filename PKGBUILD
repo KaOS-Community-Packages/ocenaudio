@@ -1,5 +1,5 @@
 pkgname=ocenaudio
-pkgver=2.0.9
+pkgver=2.0.10
 pkgrel=1
 pkgdesc="A cross-platform, easy to use, fast and functional audio editor"
 arch=('x86_64')
@@ -7,7 +7,7 @@ url="http://www.ocenaudio.com.br/"
 license=('as-is')
 depends=('qt')
 source=("http://www.ocenaudio.com.br/downloads/${pkgname}64.deb")
-md5sums=('b612006ca9e20850c893cd99b99f17c1')
+md5sums=('61a89910937a7707dead61f01693dcbe')
  
  
 build() {
