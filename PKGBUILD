@@ -14,8 +14,7 @@ build() {
   bsdtar -xf ${pkgname}64.deb data.tar.gz
   bsdtar -xf data.tar.gz
   rm data.tar.gz
-  #cd $srcdir/opt/$pkgname/lib
-  #rm libQt*
+  cd $srcdir/opt/$pkgname/lib
 }
  
 package() {
