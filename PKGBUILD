@@ -1,31 +1,17 @@
 pkgname=ocenaudio
-pkgver=2.0.16
+pkgver=3.0.4
 pkgrel=1
-pkgdesc="A cross-platform, easy to use, fast and functional audio editor"
+pkgdesc="Cross-platform, easy to use, fast and functional audio editor"
 arch=('x86_64')
 url="http://www.ocenaudio.com.br/"
-license=('as-is')
-depends=('qt')
-source=("http://www.ocenaudio.com.br/downloads/${pkgname}64.deb")
-md5sums=('42c1ad83fea3df0a23309d9b58f91cd9')
- 
- 
-build() {
-  bsdtar -xf ${pkgname}64.deb data.tar.gz
-  bsdtar -xf data.tar.gz
-  rm data.tar.gz
-  cd $srcdir/opt/$pkgname/lib
-}
- 
+license=('custom')
+depends=('desktop-file-utils' 'gtk-update-icon-cache' 'jack' 'pulseaudio'
+         'qt5-base' 'shared-mime-info')
+sha256sums_x86_64=('e23dd32ab5dc77e51387d2202ee760489b4a82f3ace2bc7e622b3e128168638b')
+source_x86_64=("http://www.ocenaudio.com.br/downloads/ocenaudio_debian64.deb")
 package() {
-  cd $srcdir
-  install -d -m 755 $pkgdir/opt/$pkgname/{lib,bin}
-  install -d -m 755 $pkgdir/usr/share
-  install -d -m 755 $pkgdir/usr/bin
-  install -m 755 opt/$pkgname/bin/$pkgname $pkgdir/opt/$pkgname/bin/
-  cp -d opt/$pkgname/lib/* $pkgdir/opt/$pkgname/lib/.
-  cp -dR usr/share/applications $pkgdir/usr/share/.
-  cp -dR usr/share/icons $pkgdir/usr/share/.
- 
-  ln -sf /opt/ocenaudio/bin/ocenaudio $pkgdir/usr/bin/ocenaudio
+  tar -xJf ${srcdir}/data.tar.xz -C "${pkgdir}"
+  install -dm755 "${pkgdir}/usr/bin"
+  ln -sf "/opt/$_pkgname/bin/${_pkgname}" "${pkgdir}/usr/bin"
+  rm -rf "${pkgdir}/var"
 }
