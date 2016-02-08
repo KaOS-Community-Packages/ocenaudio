@@ -7,11 +7,13 @@ url="http://www.ocenaudio.com.br/"
 license=('custom')
 depends=('desktop-file-utils' 'gtk-update-icon-cache' 'jack' 'pulseaudio'
          'qt5-base' 'shared-mime-info')
-sha256sums_x86_64=('cb58a734c9ba8d193ef8e0c44ecee08abe5d978b52da6efd9a1b533801eb565b')
-source_x86_64=("http://www.ocenaudio.com.br/downloads/ocenaudio_debian64.deb")
+source=("http://www.ocenaudio.com.br/downloads/ocenaudio_debian64.deb")
+md5sums=('4a706f1c57c7916b2ba1d540657e8270')
+
 package() {
   tar -xJf ${srcdir}/data.tar.xz -C "${pkgdir}"
   install -dm755 "${pkgdir}/usr/bin"
+  
   ln -sf "/opt/$_pkgname/bin/${_pkgname}" "${pkgdir}/usr/bin"
   rm -rf "${pkgdir}/var"
 }
