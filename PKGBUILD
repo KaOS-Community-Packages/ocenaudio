@@ -1,5 +1,5 @@
 pkgname=ocenaudio
-pkgver=3.1.4
+pkgver=3.1.5
 pkgrel=1
 pkgdesc="Cross-platform, easy to use, fast and functional audio editor"
 arch=('x86_64')
@@ -8,7 +8,7 @@ license=('custom')
 depends=('desktop-file-utils' 'gtk-update-icon-cache' 'jack' 'pulseaudio'
          'qt5-base' 'shared-mime-info')
 source=("http://www.ocenaudio.com.br/downloads/ocenaudio_debian64.deb")
-md5sums=('376d0d1e63a0c8872988306a97748bc2')
+md5sums=('807738ddff5dc8fdfa173d5079641c33')
 
 package() {
   tar -xJf ${srcdir}/data.tar.xz -C "${pkgdir}"
